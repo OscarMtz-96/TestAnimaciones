@@ -22,8 +22,10 @@ export class SelectorComponent implements OnInit {
   typeP: string;
   animation: string;
   animationP: string;
+  animationMes: string;
   description = false;
   movementIncome: any[] = [];
+  mes: string;
 
   incomeForm: FormGroup;
 
@@ -80,13 +82,19 @@ export class SelectorComponent implements OnInit {
     this.animationP = 'animate__fadeIn';
   }
 
+  selectedMes(text) {
+    this.mes = text;
+    this.animationMes = 'animate__fadeIn';
+  }
+
   removeClass(){
     this.animation = '';
     this.animationP = '';
+    this.animationMes = '';
   }
 
   saveIncome() {
-    if (this.incomeForm.invalid){
+    if (this.incomeForm.invalid) {
       return this.incomeForm.markAllAsTouched();
     }
     console.log(this.incomeForm);
@@ -102,6 +110,7 @@ export class SelectorComponent implements OnInit {
       descripccion : [ ],
       fecha : ['', [Validators.required]],
       hora : ['', [Validators.required]],
+      type : ['', [Validators.required]],
     });
   }
 
@@ -111,6 +120,7 @@ export class SelectorComponent implements OnInit {
     cuenta: this.cuenta,
     categoria: 'Sueldo',
     descripccion: 'descripccion corta',
+    type: 'Ingreso',
   });
 }
 

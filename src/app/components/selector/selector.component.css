@@ -8,7 +8,7 @@ button.s{
     border-color: rgb(223, 223, 223);
 }
 .button:hover{
-    filter: brightness(108%);
+    filter: brightness(110%);
     cursor: pointer;
 }
 .button:active{

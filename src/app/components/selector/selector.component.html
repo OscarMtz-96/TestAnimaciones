@@ -4,7 +4,7 @@
 <hr>
 <div id="myGroup2">
 <div class="row">
-    <div class="col-8">
+    <div class="col-6">
         <div *ngIf="cuenta">
             <button class="btn btn-outline-{{type}} btn-lg btn-block animate__animated {{animation}}" type="button" data-toggle="collapse" data-target="#contentId" aria-expanded="false" aria-controls="contentId" (click)="removeClass()"> 
                 <i class="fa fa-{{fa}}"></i> {{cuenta}} <i class="fa fa-chevron-down"></i>
@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <div class="col-4">
+    <div class="col-6">
 
         <div *ngIf="cuentaP">
             <button class="btn btn-outline-primary btn-lg btn-block animate__animated {{animationP}}" data-toggle="collapse" data-target="#contentId2" aria-expanded="false" aria-controls="contentId2" (click)="removeClass()">
@@ -108,6 +108,73 @@
 
 </div>
 
+
+    <div class="row">
+        <div class="col-12 mt-3">
+
+            <button *ngIf="!mes" class="btn btn-outline-primary btn-block animate__animated {{animationMes}}" data-toggle="collapse" data-target="#contentId3" aria-expanded="false" aria-controls="contentId" (click)="removeClass()">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i> Todos, 2020 <i class="fas fa-chevron-right"></i> 
+            </button>
+            <button *ngIf="mes" class="btn btn-outline-primary btn-block animate__animated {{animationMes}}" data-toggle="collapse" data-target="#contentId3" aria-expanded="false" aria-controls="contentId" (click)="removeClass()">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i> {{mes}}, 2020 <i class="fas fa-chevron-right"></i> 
+            </button>
+
+        </div>
+    </div>
+
+    <div class="collapse selector text-center container" id="contentId3" data-parent="#myGroup2">
+
+        <div class="row">
+            <div class="col-4 bg-light text-dark rounded button button-period" data-toggle="collapse" data-target="#contentId3" (click)="selectedMes('Enero')">
+                <h4>Enero</h4>
+            </div>
+            <div class="col-4 bg-light text-dark rounded button button-period" data-toggle="collapse" data-target="#contentId3" (click)="selectedMes('Febero')">
+                <h4>Febrero</h4>
+            </div>
+            <div class="col-4 bg-light text-dark rounded button button-period" data-toggle="collapse" data-target="#contentId3" (click)="selectedMes('Marzo')">
+                <h4>Marzo</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 bg-light text-dark rounded button button-period" data-toggle="collapse" data-target="#contentId3" (click)="selectedMes('Abril')">
+                <h4>Abril</h4>
+            </div>
+            <div class="col-4 bg-light text-dark rounded button button-period" data-toggle="collapse" data-target="#contentId3" (click)="selectedMes('Mayo')">
+                <h4>Mayo</h4>
+            </div>
+            <div class="col-4 bg-light text-dark rounded button button-period" data-toggle="collapse" data-target="#contentId3" (click)="selectedMes('Junio')">
+                <h4>Junio</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 bg-light text-dark rounded button button-period" data-toggle="collapse" data-target="#contentId3" (click)="selectedMes('Julio')">
+                <h4>Julio</h4>
+            </div>
+            <div class="col-4 bg-light text-dark rounded button button-period" data-toggle="collapse" data-target="#contentId3" (click)="selectedMes('Agosto')">
+                <h4>Agosto</h4>
+            </div>
+            <div class="col-4 bg-light text-dark rounded button button-period" data-toggle="collapse" data-target="#contentId3" (click)="selectedMes('Septiembre')">
+                <h4>Septiembre</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 bg-light text-dark rounded button button-period" data-toggle="collapse" data-target="#contentId3" (click)="selectedMes('Octubre')">
+                <h4>Octubre</h4>
+            </div>
+            <div class="col-4 bg-light text-dark rounded button button-period" data-toggle="collapse" data-target="#contentId3" (click)="selectedMes('Noviembre')">
+                <h4>Noviembre</h4>
+            </div>
+            <div class="col-4 bg-light text-dark rounded button button-period" data-toggle="collapse" data-target="#contentId3" (click)="selectedMes('Diciembre')">
+                <h4>Diciembre</h4>
+            </div>
+        </div>
+
+    </div>
+
+
 </div>
 
 
@@ -173,6 +240,8 @@
                 </div>
                 </div>
             </div>
+
+            <input type="hidden" formControlName="type">
 
             <button class="btn btn-outline-success btn-block btn-lg offset-5 col-2 mt-5 mb-3" type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
             
@@ -268,8 +337,9 @@
         <tr>
             <th>No.</th>
             <th>Cantidad</th>
-            <th>Categoria</th>
             <th>Descripccion</th>
+            <th>Categoria</th>
+            <th>Tipo de movimiento</th>
             <th>Fecha</th>
             <th>Hora</th>
         </tr>
@@ -278,10 +348,11 @@
         <tr *ngFor="let movement of movementIncome; let i = index">
             <td>{{i + 1}}</td>
             <td>{{ movement.cantidad | currency }}</td>
-            <td>{{movement.descripccion}}</td>
-            <td>{{movement.categoria}}</td>
-            <td>{{movement.fecha.month +"/"+movement.fecha.day+"/"+movement.fecha.year | date : 'dd MMMM yyyy' | titlecase }}</td>
-            <td>{{(movement.fecha.month +"/"+movement.fecha.day+"/"+movement.fecha.year+" "+ movement.hora.hour+":"+movement.hora.minute | date: 'hh:mm a')}}</td>
+            <td>{{ movement.descripccion }}</td>
+            <td>{{ movement.categoria  }}</td>
+            <td>{{ movement.type }}</td>
+            <td>{{ movement.fecha.month +"/"+movement.fecha.day+"/"+movement.fecha.year | date : 'dd MMMM yyyy' | titlecase }}</td>
+            <td>{{ (movement.fecha.month +"/"+movement.fecha.day+"/"+movement.fecha.year+" "+ movement.hora.hour+":"+movement.hora.minute | date: 'hh:mm a')  }}</td>
         </tr>
     </tbody>
 </table>
