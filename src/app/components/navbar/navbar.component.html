@@ -1,0 +1,13 @@
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  
+  <!-- Use any element to open the sidenav -->
+  <div class="text-right">
+  <button class="btn btn-light mt-3" (click)="openNav()" *ngIf="isOpen == false"><i class="fa fa-bars" aria-hidden="true"></i></button>
+  <button class="btn btn-light mt-3" (click)="openNav()" *ngIf="isOpen == true"><i class="fa fa-times" aria-hidden="true"></i></button>
+  </div>

@@ -1,0 +1,298 @@
+
+<div class="mt-4">
+<h1>Inicio</h1>
+<hr>
+<div id="myGroup2">
+<div class="row">
+    <div class="col-8">
+        <div *ngIf="cuenta">
+            <button class="btn btn-outline-{{type}} btn-lg btn-block animate__animated {{animation}}" type="button" data-toggle="collapse" data-target="#contentId" aria-expanded="false" aria-controls="contentId" (click)="removeClass()"> 
+                <i class="fa fa-{{fa}}"></i> {{cuenta}} <i class="fa fa-chevron-down"></i>
+            </button>
+        </div>
+
+        <div *ngIf="!cuenta">
+            <button class="btn btn-outline-primary btn-lg btn-block" type="button" data-toggle="collapse" data-target="#contentId" aria-expanded="false" aria-controls="contentId"> 
+                Seleccionar <i class="fa fa-chevron-down"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="col-4">
+
+        <div *ngIf="cuentaP">
+            <button class="btn btn-outline-primary btn-lg btn-block animate__animated {{animationP}}" data-toggle="collapse" data-target="#contentId2" aria-expanded="false" aria-controls="contentId2" (click)="removeClass()">
+                <i class="fa fa-{{faP}}"></i> {{cuentaP}} <i class="fa fa-chevron-down"></i>
+            </button>
+        </div>
+
+        <div *ngIf="!cuentaP">
+            <button class="btn btn-outline-primary btn-lg btn-block" data-toggle="collapse" data-target="#contentId2" aria-expanded="false" aria-controls="contentId2">
+                Seleccionar <i class="fa fa-chevron-down"></i>
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="collapse selector text-center container" id="contentId" data-parent="#myGroup2">
+
+    <div class="row">
+        <div class="col-6 bg-primary text-light rounded button" (click)="selected('Cuenta 1', 'credit-card', 'primary')" data-toggle="collapse" data-target="#contentId">
+            <h3><i class="fa fa-credit-card fa-lg"></i> Cuenta 1</h3>
+        </div>
+        <div class="col-6 bg-secondary text-light rounded button" (click)="selected('Cuenta 2', 'money-bill-wave', 'secondary')" data-toggle="collapse" data-target="#contentId">
+            <h3><i class="fa fa-money-bill-wave fa-lg"></i> Cuenta 2</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6 bg-info text-light rounded button" (click)="selected('Cuenta 3', 'apple', 'info')" data-toggle="collapse" data-target="#contentId">
+            <h3><i class="fa fa-apple fa-lg"></i> Cuenta 3</h3>
+        </div>
+        <div class="col-6 bg-warning text-light rounded button" (click)="selected('Cuenta 4', 'ambulance', 'warning')" data-toggle="collapse" data-target="#contentId">
+            <h3><i class="fa fa-ambulance fa-lg"></i> Cuenta 4</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6 bg-danger text-light rounded button" (click)="selected('Cuenta 5', 'cc-paypal', 'danger')" data-toggle="collapse" data-target="#contentId">
+            <h3><i class="fa fa-cc-paypal fa-lg"></i> Cuenta 5</h3>
+        </div>
+        <div class="col-6 bg-dark text-light rounded button" (click)="selected('Cuenta 6', 'cc-discover', 'dark')" data-toggle="collapse" data-target="#contentId">
+            <h3><i class="fa fa-cc-discover fa-lg"></i> Cuenta 6</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6 bg-light rounded button" (click)="selected('Todas las cuentas', 'grip-horizontal', 'secondary')" data-toggle="collapse" data-target="#contentId">
+            <h3><i class="fa fa-grip-horizontal fa-lg"></i> Todas las cuentas</h3>
+        </div>
+        <div class="col-6 bg-light rounded button" (click)="selected('Crear cuenta', 'plus-circle', 'secondary')" data-toggle="collapse" data-target="#contentId">
+            <h3><i class="fa fa-plus-circle fa-lg"></i> Crear cuenta</h3>
+        </div>
+    </div>
+
+</div>
+
+<div class="collapse selector text-center container" id="contentId2" data-parent="#myGroup2">
+
+    <div class="row">
+        <div class="col-6 bg-light text-dark rounded button-period" (click)="selectedPeriodo('Por dia', 'calendar-day', 'primary')" data-toggle="collapse" data-target="#contentId2">
+            <h3><i class="fa fa-calendar-day fa-lg"></i> Por dia</h3>
+        </div>
+        <div class="col-6 bg-light text-dark rounded button-period" (click)="selectedPeriodo('Semanal', 'calendar-minus', 'primary')" data-toggle="collapse" data-target="#contentId2">
+            <h3><i class="fa fa-calendar-minus fa-lg"></i> Semanal</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6 bg-light text-dark rounded button-period" (click)="selectedPeriodo('Quincenal', 'calendar-week', 'primary')" data-toggle="collapse" data-target="#contentId2">
+            <h3><i class="fa fa-calendar-week fa-lg"></i> Quincenal</h3>
+        </div>
+        <div class="col-6 bg-light text-dark rounded button-period" (click)="selectedPeriodo('Mensual', 'calendar-alt', 'primary')" data-toggle="collapse" data-target="#contentId2">
+            <h3><i class="fa fa-calendar-alt fa-lg"></i> Mensual</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6 bg-light text-dark rounded button-period" (click)="selectedPeriodo('Anual', 'calendar', 'primary')" data-toggle="collapse" data-target="#contentId2">
+            <h3><i class="fa fa-calendar fa-lg"></i> Anual</h3>
+        </div>
+        <div class="col-6 bg-light text-dark rounded button-period" (click)="selectedPeriodo('Por periodo', 'table', 'primary')" data-toggle="collapse" data-target="#contentId2">
+            <h3><i class="fa fa-table fa-lg"></i> Por periodo</h3>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+
+<div id="group2">
+
+<div class="row mt-5">
+
+    <div class="col-4">
+        <button class="btn btn-block btn-success btn-lg" data-toggle="collapse" href="#income" aria-expanded="false" aria-controls="income">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i> Ingreso
+        </button>
+    </div>
+
+    <div class="col-4">
+        <button class="btn btn-block btn-danger btn-lg" data-toggle="collapse" href="#expense" aria-expanded="false" aria-controls="expense">
+            <i class="fa fa-arrow-down" aria-hidden="true"></i> Gasto
+        </button>
+    </div>
+
+    <div class="col-4">
+        <button class="btn btn-block btn-info btn-lg" data-toggle="collapse" href="#transfer" aria-expanded="false" aria-controls="transfer">
+            <i class="fa fa-exchange-alt" aria-hidden="true"></i> Transferencia
+        </button>
+    </div>
+
+</div>
+
+<div class="text-center mt-3">
+
+    
+    <div class="collapse incomeBG" id="income" data-parent="#group2">
+    
+        <form autocomplete="on" [formGroup]="incomeForm" (ngSubmit)="saveIncome()">
+        
+            <input type="number" class="form-control mainNumber col-6 offset-3" placeholder="8,500.00" step=".01" formControlName="cantidad" [class.is-invalid]="cantidadNoValida">
+
+            <button type="button" *ngIf="cuenta" class="btn btn-outline-{{type}} btn-lg mt-2" data-toggle="collapse" data-target="#contentId" (click)="removeClass()" ><i class="fa fa-{{fa}}" aria-hidden="true"></i> {{cuenta}}</button>
+            <button type="button" *ngIf="!cuenta" class="btn btn-outline-primary btn-lg mt-2" data-toggle="collapse" data-target="#contentId" (click)="removeClass()">Seleccionar <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+
+            <input type="hidden" value="" formControlName="cuenta" [class.is-invalid]="cuentaNoValida">
+
+            <br>
+            <button type="button" class="btn btn-outline-warning btn-lg mt-2"><i class="fas fa-money-bill"></i> Sueldo</button>
+            <input class="form-control" type="hidden" name="categoria" formControlName="categoria" value="" [class.is-invalid]="categoriaNoValida">
+
+            <br>
+            <div class="mt-2">
+                <button type="button" class="btn btn-outline-secondary btn-lg" *ngIf="!description" (click)="description = !description"><i class="fas fa-edit"></i> Agrega una descripcción</button>
+                <textarea *ngIf="description" class="form-control col-4 offset-4" formControlName="descripccion"></textarea>
+            </div>
+
+            <div class="input-group mt-3 offset-3 col-6">
+                <input class="form-control" placeholder="YYYY-MM-DD" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" formControlName="fecha" [class.is-invalid]="fechaNoValida">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+            </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                <div class="offset-5">
+                    <ngb-timepicker [(ngModel)]="time" formControlName="hora" [class.is-invalid]="horaNoValida"></ngb-timepicker>
+                </div>
+                </div>
+            </div>
+
+            <button class="btn btn-outline-success btn-block btn-lg offset-5 col-2 mt-5 mb-3" type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
+            
+        </form>
+        
+    </div>
+
+
+    <div class="collapse expenseBG" id="expense" data-parent="#group2">
+        <input type="number" class="form-control mainNumber col-6 offset-3" placeholder="420.00" step=".01">
+        <button *ngIf="cuenta" class="btn btn-outline-{{type}} btn-lg mt-2" data-toggle="collapse" data-target="#contentId" (click)="removeClass()"><i class="fa fa-{{fa}}" aria-hidden="true"></i> {{cuenta}}</button>
+        <button *ngIf="!cuenta" class="btn btn-outline-primary btn-lg mt-2" data-toggle="collapse" data-target="#contentId" (click)="removeClass()">Seleccionar <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+        <br>
+        <button class="btn btn-outline-warning btn-lg mt-2"><i class="fas fa-money-bill"></i> Sueldo - Subcategoria</button>
+        <br>
+        <div class="mt-2">
+            <button class="btn btn-outline-secondary btn-lg" *ngIf="!description" (click)="description = !description"><i class="fas fa-edit"></i> Agrega una descripcción</button>
+            <textarea *ngIf="description" class="form-control col-4 offset-4"></textarea>
+        </div>
+
+        <div class="input-group mt-3 offset-3 col-6">
+            <input class="form-control" placeholder="YYYY-MM-DD" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+        </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+            <div class="offset-5">
+                <ngb-timepicker [(ngModel)]="time"></ngb-timepicker>
+            </div>
+            </div>
+        </div>
+
+        <button class="btn btn-outline-danger btn-block btn-lg offset-5 col-2 mt-5 mb-3"><i class="fa fa-check" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="collapse transferBG" id="transfer" data-parent="#group2">
+        <input type="number" class="form-control mainNumber col-6 offset-3" placeholder="420.00" step=".01">
+        <div class="container">
+        <div class="row">
+            <div class="col-4 text-right">
+                <button *ngIf="!cuenta" class="btn btn-outline-primary btn-lg mt-2" data-toggle="collapse" data-target="#contentId" (click)="removeClass()">Seleccionar <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                <button *ngIf="cuenta" class="btn btn-outline-{{type}} btn-lg mt-2" data-toggle="collapse" data-target="#contentId" (click)="removeClass()"><i class="fa fa-{{fa}}" aria-hidden="true"></i> {{cuenta}}</button>
+            </div>
+            <div class="col-4 mt-2">
+                <i class="far fa-arrow-alt-circle-right fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="col-4 text-left">
+                <button *ngIf="!cuenta" class="btn btn-outline-primary btn-lg mt-2" data-toggle="collapse" data-target="#contentId" (click)="removeClass()">Seleccionar <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                <button *ngIf="cuenta" class="btn btn-outline-primary btn-lg mt-2" data-toggle="collapse" data-target="#contentId" (click)="removeClass()">Seleccionar <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div class="mt-3">
+            <button class="btn btn-outline-secondary btn-lg" *ngIf="!description" (click)="description = !description"><i class="fas fa-edit"></i> Agrega una descripcción</button>
+            <textarea *ngIf="description" class="form-control col-4 offset-4"></textarea>
+        </div>
+
+        <div class="input-group mt-3 offset-3 col-6">
+            <input class="form-control" placeholder="YYYY-MM-DD" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+        </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+            <div class="offset-5">
+                <ngb-timepicker [(ngModel)]="time"></ngb-timepicker>
+            </div>
+            </div>
+        </div>
+
+        <button class="btn btn-outline-info btn-block btn-lg offset-5 col-2 mt-5 mb-3"><i class="fa fa-check" aria-hidden="true"></i></button>
+    </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<div class="row">
+<h3 class="mt-3 mr-5">Cuenta seleccionada: <small *ngIf="!cuenta">Ninguno</small> <small *ngIf="cuenta"> <i class="fa fa-{{fa}}"></i> {{cuenta}}</small></h3>
+<h3 class="mt-3">Periodo seleccionado: <small *ngIf="!cuentaP">Ninguno</small> <small *ngIf="cuentaP">{{cuentaP}}</small></h3>
+</div>
+
+<hr>
+
+<table *ngIf="movementIncome.length > 0" class="table container mt-5 text-center">
+    <thead class="thead-dark">
+        <tr>
+            <th>No.</th>
+            <th>Cantidad</th>
+            <th>Categoria</th>
+            <th>Descripccion</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movement of movementIncome; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{ movement.cantidad | currency }}</td>
+            <td>{{movement.descripccion}}</td>
+            <td>{{movement.categoria}}</td>
+            <td>{{movement.fecha.month +"/"+movement.fecha.day+"/"+movement.fecha.year | date : 'dd MMMM yyyy' | titlecase }}</td>
+            <td>{{(movement.fecha.month +"/"+movement.fecha.day+"/"+movement.fecha.year+" "+ movement.hora.hour+":"+movement.hora.minute | date: 'hh:mm a')}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+<pre>
+    estado del formulario: {{incomeForm.valid}}
+    <br>
+    Status: {{incomeForm.status}}
+  </pre>
+  
+  <pre>
+    {{incomeForm.value | json}}
+  </pre>
