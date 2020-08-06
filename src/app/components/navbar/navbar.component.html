@@ -1,7 +1,7 @@
 <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-    <a routerLink="/inicio">Inicio</a>
-    <a routerLink="/movimientos">Movimientos</a>
+    <a href="javascript:void(0)" class="closebtn" (click)="openNav(); isOpen == !isOpen">&times;</a>
+    <a routerLink="/inicio" (click)="openNav(); isOpen == !isOpen" >Inicio</a>
+    <a routerLink="/movimientos" (click)="openNav(); isOpen == !isOpen">Movimientos</a>
     <a href="#">Clients</a>
     <a href="#">Contact</a>
   </div>

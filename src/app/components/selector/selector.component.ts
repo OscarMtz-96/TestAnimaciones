@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NgbDateStruct, NgbTimeStruct, NgbTimepickerConfig } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { ValidadoresService } from '../../services/validadores.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-selector',
@@ -98,7 +99,16 @@ export class SelectorComponent implements OnInit {
       return this.incomeForm.markAllAsTouched();
     }
     console.log(this.incomeForm);
-    this.movementIncome.push(this.incomeForm.value);
+    Swal.fire({
+      icon: 'success',
+      title: 'Guardando',
+      text: 'El movimiento se guardo correctamente',
+      confirmButtonText: '<i class="fas fa-check"></i>',
+      timer: 1500
+    });
+    setTimeout(() => {
+      this.movementIncome.push(this.incomeForm.value);
+    }, 1500);
     console.log(this.movementIncome);
   }
 

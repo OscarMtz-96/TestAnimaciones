@@ -1,19 +1,19 @@
-.button-period{
+.button-month{
     /* transition: background-color .3s linear !important; */
     transition: .3s ease-in-out;
     border-width: 1px;
     border-style: solid;
     border-color: rgb(223, 223, 223);
 }
-.button-period:hover{
+.button-month:hover{
     transition: 0s ease-in-out;
     background-color: rgb(241, 132, 255) !important;
     cursor: pointer;
 }
-.button-period:active{
+.button-month:active{
     filter: brightness(80%);
 }
 .rounded {
     border-radius: 20px;
-    padding: 5%;
+    padding: 3%;
 }

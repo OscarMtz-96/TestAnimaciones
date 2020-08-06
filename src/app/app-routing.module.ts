@@ -7,7 +7,7 @@ import { MovimientosComponent } from './components/movimientos/movimientos.compo
 const routes: Routes = [
   {path: 'inicio', component: SelectorComponent},
   {path: 'movimientos', component: MovimientosComponent},
-  {path: '**', pathMatch: 'full', redirectTo: 'selector'}
+  {path: '**', pathMatch: 'full', redirectTo: 'inicio'}
 ];
 
 @NgModule({

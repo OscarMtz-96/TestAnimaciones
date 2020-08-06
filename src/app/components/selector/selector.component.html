@@ -357,6 +357,12 @@
     </tbody>
 </table>
 
+<div class="container" *ngIf="!movementIncome.length">
+
+<h3>¡No hay movimientos! Registra uno</h3>
+
+</div>
+
 <hr>
 <pre>
     estado del formulario: {{incomeForm.valid}}
