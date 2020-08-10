@@ -1,0 +1,119 @@
+<div class="grayBG animate__animated animate__fadeIn">
+
+<h3 class="text-center">1 de {{mes}}</h3>
+    
+<div class="container expenseCard mt-2 mb-2" (click)="hide = !hide; hideBtn()">
+    <div class="row mt-3">
+        <div class="col-2">
+            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: #000000;"></i>
+        </div>
+        <div class="col-8">
+            <h6 class="grayText">Efectivo</h6>
+            <h5>Comida - Despensa</h5>
+            <p class="grayText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio. At vel impedit, iste optio, adipisci, ex enim numquam soluta dolorem incidunt consectetur! Earum corrupti veniam eum neque, quisquam consectetur?</p>
+        </div>
+        <div class="col-2 text-right">
+            <h6 class="grayText">8:35</h6>
+            <h3>$1,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+        </div>
+        <div class="buttons animate__animated animate__fadeInRight" *ngIf="hide == false">
+            <button class="btn btn-outline-primary optBtn">Delete</button>
+            <button class="btn btn-outline-primary optBtn">Edit</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="container expenseCard mt-2 mb-2">
+    <div class="row mt-3">
+        <div class="col-2">
+            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: orangered;"></i>
+        </div>
+        <div class="col-8">
+            <h6 class="grayText">Efectivo</h6>
+            <h5>Comida - Despensa</h5>
+            <p class="grayText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio. At vel impedit, iste optio, adipisci, ex enim numquam soluta dolorem incidunt consectetur! Earum corrupti veniam eum neque, quisquam consectetur?</p>
+        </div>
+        <div class="col-2 text-right">
+            <h6 class="grayText">8:35</h6>
+            <h3>$1,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+        </div>
+    </div>
+</div>
+
+
+<h3 class="text-center">2 de {{mes}}</h3>
+    
+<div class="container expenseCard mt-2 mb-2">
+    <div class="row mt-3">
+        <div class="col-2">
+            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: rgb(204, 82, 204);"></i>
+        </div>
+        <div class="col-8">
+            <h6 class="grayText">Efectivo</h6>
+            <h5>Comida - Despensa</h5>
+            <p class="grayText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio. At vel impedit, iste optio, adipisci, ex enim numquam soluta dolorem incidunt consectetur! Earum corrupti veniam eum neque, quisquam consectetur?</p>
+        </div>
+        <div class="col-2 text-right">
+            <h6 class="grayText">8:35</h6>
+            <h3>$1,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+        </div>
+    </div>
+</div>
+
+<div class="container expenseCard mt-2 mb-2">
+    <div class="row mt-3">
+        <div class="col-2">
+            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: purple;"></i>
+        </div>
+        <div class="col-8">
+            <h6 class="grayText">Efectivo</h6>
+            <h5>Comida - Despensa</h5>
+            <p class="grayText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio. At vel impedit, iste optio, adipisci, ex enim numquam soluta dolorem incidunt consectetur! Earum corrupti veniam eum neque, quisquam consectetur?</p>
+        </div>
+        <div class="col-2 text-right">
+            <h6 class="grayText">8:35</h6>
+            <h3>$1,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+        </div>
+    </div>
+</div>
+
+<div class="container expenseCard mt-2 mb-2">
+    <div class="row mt-3">
+        <div class="col-2">
+            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: #000000;"></i>
+        </div>
+        <div class="col-8">
+            <h6 class="grayText">Efectivo</h6>
+            <h5>Comida - Despensa</h5>
+            <p class="grayText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio. At vel impedit, iste optio, adipisci, ex enim numquam soluta dolorem incidunt consectetur! Earum corrupti veniam eum neque, quisquam consectetur?</p>
+        </div>
+        <div class="col-2 text-right">
+            <h6 class="grayText">8:35</h6>
+            <h3>$1,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+        </div>
+    </div>
+</div>
+
+
+<h3 class="text-center">3 de {{mes}}</h3>
+    
+<div class="container expenseCard mt-2 mb-2">
+    <div class="row mt-3">
+        <div class="col-2">
+            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: yellowgreen;"></i>
+        </div>
+        <div class="col-8">
+            <h6 class="grayText">Efectivo</h6>
+            <h5>Comida - Despensa</h5>
+            <p class="grayText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio. At vel impedit, iste optio, adipisci, ex enim numquam soluta dolorem incidunt consectetur! Earum corrupti veniam eum neque, quisquam consectetur?</p>
+        </div>
+        <div class="col-2 text-right">
+            <h6 class="grayText">8:35</h6>
+            <h3>$1,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+        </div>
+    </div>
+</div> -->
+
+</div>
+

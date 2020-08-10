@@ -20,7 +20,7 @@
 <div id="myGroup">
 
     <div class="row">
-        <div class="col-12 mt-3">
+        <div class="col-12 mt-3 mb-3">
 
             <button *ngIf="!mes" class="btn btn-outline-primary btn-block animate__animated" data-toggle="collapse" data-target="#contentId" aria-expanded="false" aria-controls="contentId">
                 <i class="fa fa-chevron-left" aria-hidden="true"></i> Todos, 2020 <i class="fas fa-chevron-right"></i> 
@@ -91,4 +91,10 @@
 
     </div>
 
+</div>
+
+<hr>
+
+<div>
+    <app-movimiento [mes]="mes"></app-movimiento>
 </div>

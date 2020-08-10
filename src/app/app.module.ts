@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import es from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
 import { MovimientosComponent } from './components/movimientos/movimientos.component';
+import { MovimientoComponent } from './components/movimiento/movimiento.component';
 
 registerLocaleData(es);
 
@@ -22,6 +23,7 @@ registerLocaleData(es);
     AccountComponent,
     NavbarComponent,
     MovimientosComponent,
+    MovimientoComponent,
     ],
   imports: [
     BrowserModule,

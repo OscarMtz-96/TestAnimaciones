@@ -21,7 +21,7 @@ export class MovimientosComponent implements OnInit {
   selectedMes(text) {
     this.mes = text;
   }
-  
+
   share() {
     this.cargando = true;
     Swal.fire({

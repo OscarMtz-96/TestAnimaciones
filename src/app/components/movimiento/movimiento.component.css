@@ -1,0 +1,28 @@
+.expenseCard {
+    /* border-color: gray;
+    border-width: 2px;
+    border-style: solid; */
+    /* border-radius: 20px; */
+    background-color: white;
+}
+
+.grayText{
+    color: gray;
+}
+
+.faStyled{
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 50%;
+}
+
+.grayBG {
+    background-color: rgb(235, 233, 233);
+}
+
+.optBtn{
+    height: 100%;
+}
