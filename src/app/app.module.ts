@@ -14,6 +14,7 @@ import { registerLocaleData } from '@angular/common';
 import { MovimientosComponent } from './components/movimientos/movimientos.component';
 import { MovimientoComponent } from './components/movimiento/movimiento.component';
 
+
 registerLocaleData(es);
 
 @NgModule({
@@ -30,7 +31,7 @@ registerLocaleData(es);
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'es-MX' },

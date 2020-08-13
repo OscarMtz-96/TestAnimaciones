@@ -1,9 +1,9 @@
-<div class="grayBG animate__animated animate__fadeIn">
+<div class="grayBG animate__animated animate__fadeIn" style="margin-bottom: 100px;">
 
 <h3 class="text-center">1 de {{mes}}</h3>
     
-<div class="container expenseCard mt-2 mb-2" (click)="hide = !hide; hideBtn()">
-    <div class="row mt-3">
+<div class="container expenseCard mt-2 mb-2">
+    <div class="row mt-3" (click)="hiden()">
         <div class="col-2">
             <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: #000000;"></i>
         </div>
@@ -14,20 +14,17 @@
         </div>
         <div class="col-2 text-right">
             <h6 class="grayText">8:35</h6>
-            <h3>$1,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
-        </div>
-        <div class="buttons animate__animated animate__fadeInRight" *ngIf="hide == false">
-            <button class="btn btn-outline-primary optBtn">Delete</button>
-            <button class="btn btn-outline-primary optBtn">Edit</button>
+            <h3>$100,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+            <button class="btn btn-outline-info animate__animated animate__fadeInRight optBtn" *ngIf="hide == false">Editar</button>
+            <button class="btn btn-outline-danger animate__animated animate__fadeInRight optBtn ml-2" *ngIf="hide == false" (click)="deleting('1')">Elimar</button>
         </div>
     </div>
 </div>
 
-
-<!-- <div class="container expenseCard mt-2 mb-2">
-    <div class="row mt-3">
+<div class="container expenseCard mt-2 mb-2">
+    <div class="row mt-3" (click)="hiden()">
         <div class="col-2">
-            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: orangered;"></i>
+            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: #000000;"></i>
         </div>
         <div class="col-8">
             <h6 class="grayText">Efectivo</h6>
@@ -36,7 +33,9 @@
         </div>
         <div class="col-2 text-right">
             <h6 class="grayText">8:35</h6>
-            <h3>$1,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+            <h3>$100,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+            <button class="btn btn-outline-info animate__animated animate__fadeInRight optBtn" *ngIf="hide == false">Editar</button>
+            <button class="btn btn-outline-danger animate__animated animate__fadeInRight optBtn ml-2" *ngIf="hide == false" (click)="deleting('2')">Elimar</button>
         </div>
     </div>
 </div>
@@ -45,41 +44,7 @@
 <h3 class="text-center">2 de {{mes}}</h3>
     
 <div class="container expenseCard mt-2 mb-2">
-    <div class="row mt-3">
-        <div class="col-2">
-            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: rgb(204, 82, 204);"></i>
-        </div>
-        <div class="col-8">
-            <h6 class="grayText">Efectivo</h6>
-            <h5>Comida - Despensa</h5>
-            <p class="grayText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio. At vel impedit, iste optio, adipisci, ex enim numquam soluta dolorem incidunt consectetur! Earum corrupti veniam eum neque, quisquam consectetur?</p>
-        </div>
-        <div class="col-2 text-right">
-            <h6 class="grayText">8:35</h6>
-            <h3>$1,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
-        </div>
-    </div>
-</div>
-
-<div class="container expenseCard mt-2 mb-2">
-    <div class="row mt-3">
-        <div class="col-2">
-            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: purple;"></i>
-        </div>
-        <div class="col-8">
-            <h6 class="grayText">Efectivo</h6>
-            <h5>Comida - Despensa</h5>
-            <p class="grayText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio. At vel impedit, iste optio, adipisci, ex enim numquam soluta dolorem incidunt consectetur! Earum corrupti veniam eum neque, quisquam consectetur?</p>
-        </div>
-        <div class="col-2 text-right">
-            <h6 class="grayText">8:35</h6>
-            <h3>$1,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
-        </div>
-    </div>
-</div>
-
-<div class="container expenseCard mt-2 mb-2">
-    <div class="row mt-3">
+    <div class="row mt-3" (click)="hiden()">
         <div class="col-2">
             <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: #000000;"></i>
         </div>
@@ -90,18 +55,16 @@
         </div>
         <div class="col-2 text-right">
             <h6 class="grayText">8:35</h6>
-            <h3>$1,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+            <h3>$100,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+            <button class="btn btn-outline-info animate__animated animate__fadeInRight optBtn" *ngIf="hide == false">Editar</button>
+            <button class="btn btn-outline-danger animate__animated animate__fadeInRight optBtn ml-2" *ngIf="hide == false" (click)="deleting('3')">Elimar</button>
         </div>
     </div>
 </div>
-
-
-<h3 class="text-center">3 de {{mes}}</h3>
-    
 <div class="container expenseCard mt-2 mb-2">
-    <div class="row mt-3">
+    <div class="row mt-3" (click)="hiden()">
         <div class="col-2">
-            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: yellowgreen;"></i>
+            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: #000000;"></i>
         </div>
         <div class="col-8">
             <h6 class="grayText">Efectivo</h6>
@@ -110,10 +73,182 @@
         </div>
         <div class="col-2 text-right">
             <h6 class="grayText">8:35</h6>
-            <h3>$1,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+            <h3>$100,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+            <button class="btn btn-outline-info animate__animated animate__fadeInRight optBtn" *ngIf="hide == false">Editar</button>
+            <button class="btn btn-outline-danger animate__animated animate__fadeInRight optBtn ml-2" *ngIf="hide == false" (click)="deleting('3')">Elimar</button>
         </div>
     </div>
-</div> -->
+</div>
+<div class="container expenseCard mt-2 mb-2">
+    <div class="row mt-3" (click)="hiden()">
+        <div class="col-2">
+            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: #000000;"></i>
+        </div>
+        <div class="col-8">
+            <h6 class="grayText">Efectivo</h6>
+            <h5>Comida - Despensa</h5>
+            <p class="grayText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio. At vel impedit, iste optio, adipisci, ex enim numquam soluta dolorem incidunt consectetur! Earum corrupti veniam eum neque, quisquam consectetur?</p>
+        </div>
+        <div class="col-2 text-right">
+            <h6 class="grayText">8:35</h6>
+            <h3>$100,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+            <button class="btn btn-outline-info animate__animated animate__fadeInRight optBtn" *ngIf="hide == false">Editar</button>
+            <button class="btn btn-outline-danger animate__animated animate__fadeInRight optBtn ml-2" *ngIf="hide == false" (click)="deleting('3')">Elimar</button>
+        </div>
+    </div>
+</div>
+<div class="container expenseCard mt-2 mb-2">
+    <div class="row mt-3" (click)="hiden()">
+        <div class="col-2">
+            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: #000000;"></i>
+        </div>
+        <div class="col-8">
+            <h6 class="grayText">Efectivo</h6>
+            <h5>Comida - Despensa</h5>
+            <p class="grayText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio. At vel impedit, iste optio, adipisci, ex enim numquam soluta dolorem incidunt consectetur! Earum corrupti veniam eum neque, quisquam consectetur?</p>
+        </div>
+        <div class="col-2 text-right">
+            <h6 class="grayText">8:35</h6>
+            <h3>$100,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+            <button class="btn btn-outline-info animate__animated animate__fadeInRight optBtn" *ngIf="hide == false">Editar</button>
+            <button class="btn btn-outline-danger animate__animated animate__fadeInRight optBtn ml-2" *ngIf="hide == false" (click)="deleting('3')">Elimar</button>
+        </div>
+    </div>
+</div>
+<div class="container expenseCard mt-2 mb-2">
+    <div class="row mt-3" (click)="hiden()">
+        <div class="col-2">
+            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: #000000;"></i>
+        </div>
+        <div class="col-8">
+            <h6 class="grayText">Efectivo</h6>
+            <h5>Comida - Despensa</h5>
+            <p class="grayText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio. At vel impedit, iste optio, adipisci, ex enim numquam soluta dolorem incidunt consectetur! Earum corrupti veniam eum neque, quisquam consectetur?</p>
+        </div>
+        <div class="col-2 text-right">
+            <h6 class="grayText">8:35</h6>
+            <h3>$100,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+            <button class="btn btn-outline-info animate__animated animate__fadeInRight optBtn" *ngIf="hide == false">Editar</button>
+            <button class="btn btn-outline-danger animate__animated animate__fadeInRight optBtn ml-2" *ngIf="hide == false" (click)="deleting('3')">Elimar</button>
+        </div>
+    </div>
+</div>
+<div class="container expenseCard mt-2 mb-5">
+    <div class="row mt-3" (click)="hiden()">
+        <div class="col-2">
+            <i class="fas fa-utensils fa-4x mt-3 ml-4 faStyled" style="background-color: #000000;"></i>
+        </div>
+        <div class="col-8">
+            <h6 class="grayText">Efectivo</h6>
+            <h5>Comida - Despensa</h5>
+            <p class="grayText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio. At vel impedit, iste optio, adipisci, ex enim numquam soluta dolorem incidunt consectetur! Earum corrupti veniam eum neque, quisquam consectetur?</p>
+        </div>
+        <div class="col-2 text-right">
+            <h6 class="grayText">8:35</h6>
+            <h3>$100,000 <i class="fa fa-minus mt-2 ml-1" aria-hidden="true" style="color: crimson;"></i></h3>
+            <button class="btn btn-outline-info animate__animated animate__fadeInRight optBtn" *ngIf="hide == false">Editar</button>
+            <button class="btn btn-outline-danger animate__animated animate__fadeInRight optBtn ml-2" *ngIf="hide == false" (click)="deleting('3')">Elimar</button>
+        </div>
+    </div>
+</div>
+
+
 
 </div>
+
+<footer class="footer container text-center animate__animated animate__backInUp">
+    <div data-toggle="collapse" data-target="#filterPanel" aria-expanded="false" aria-controls="filterPanel" (click)="panel = !panel">
+    <i class="fa fa-chevron-up mt-2" aria-hidden="true" *ngIf="panel"></i>
+    <i class="fa fa-chevron-down mt-2" aria-hidden="true" *ngIf="!panel"></i>
+    <h4>8387.00</h4>
+    <p>Calculado con MXN</p>
+</div>
+
+<div class="collapse mb-3" id="filterPanel">
+<h5>Filtrar</h5>
+    <div class="btn-group mr-2" role="group" aria-label="First group">
+        <button type="button" class="btn btn-outline-info">Todos</button>
+        <button type="button" class="btn btn-outline-info">Confirmados</button>
+        <button type="button" class="btn btn-outline-info">Pendientes</button>
+    </div>
+
+    <br>
+
+    <div class="btn-group mr-2 mt-3" role="group" aria-label="Second group">
+        <button type="button" class="btn btn-outline-danger">Todos</button>
+        <button type="button" class="btn btn-outline-danger">Ingresos</button>
+        <button type="button" class="btn btn-outline-danger">Gastos</button>
+        <button type="button" class="btn btn-outline-danger">Transferencias</button>
+    </div>
+
+    <br>
+
+    <button class="btn btn-outline-secondary mt-3" data-toggle="modal" data-target="#modelId"><i class="fas fa-th"></i> Todas las cuentas</button>
+
+    <br>
+
+    <button class="btn btn-outline-secondary mt-3"><i class="fab fa-gg-circle"></i> Todas las categorias</button>
+
+
+</div>
+</footer>
+
+
+    <!-- Modal cuentas -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+
+                        <div class="row" data-dismiss="modal">
+                            <div class="col-2">
+                                <i class="fa fa-money faStyledModal" aria-hidden="true" style="background-color: #000000;"></i>
+                            </div>
+                            <div class="col-10 mt-1">
+                                <h5>Ahorros</h5>
+                            </div>
+                        </div>
+
+                        <div class="row" data-dismiss="modal">
+                            <div class="col-2 mt-3">
+                                <i class="fa fa-id-card faStyledModal" aria-hidden="true" style="background-color: #a81a1a;"></i>
+                            </div>
+                            <div class="col-10 mt-4">
+                                <h5>Debito</h5>
+                            </div>
+                        </div>
+
+                        <div class="row" data-dismiss="modal">
+                            <div class="col-2 mt-3">
+                                <i class="fa fa-credit-card faStyledModal" aria-hidden="true" style="background-color: #5eaff1;"></i>
+                            </div>
+                            <div class="col-10 mt-4">
+                                <h5>Tarjeta de Credito</h5>
+                            </div>
+                        </div>
+
+                        <div class="row" data-dismiss="modal">
+                            <div class="col-2 mt-3">
+                                <i class="fas fa-th faStyledModal" aria-hidden="true" style="background-color: #000000;"></i>
+                            </div>
+                            <div class="col-10 mt-4">
+                                <h5>Todas las cuentas</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 

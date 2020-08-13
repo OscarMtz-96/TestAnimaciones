@@ -9,19 +9,19 @@ export class MovimientoComponent implements OnInit {
 
   @Input() mes: string;
   hide = true;
+  panel = true;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  hideBtn(){
-    var hidden = $('.message-window');
-    if (hidden.hasClass('visible')){
-      hidden.animate({"left":"100%"}, "slow").removeClass('visible');
-  } else {
-      hidden.animate({"left":"75%"}, "slow").addClass('visible');
+  hiden(){
+    this.hide = !this.hide;
   }
+
+  deleting(id){
+    console.log(id);
   }
 
 }
